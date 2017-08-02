@@ -13,8 +13,9 @@ $(function(){
       var $author = post.data.author;
       $post.append('<h2 class ="author">' + $author + '</h2>')
 
-      var $image = post.data.preview.url;
-      $post.append("<img src='" + $image + "' />" );
+      var image = post.data.preview.images[0].source.url;
+      $post.append("<img src='" + image + "' />" );
+      console.log(image);
 
       var $comments = post.data.num_comments;
       $post.append('<p class ="comments">' + $comments + ' ' + "comments" + '</p>')
